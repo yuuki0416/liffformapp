@@ -18,15 +18,15 @@
         </div>
         <p class="mt-3">学習時間</p>
         <div　style="display: inline-block; _display: inline;">
-            <input type = "number" name="bangou" min="1" max="35" required>
+            <input type = "number" name="zikan" min="1" max="35" required>
         </div>
         <div style="display: inline-block; _display: inline;">時間</div>
         <div　style="display: inline-block; _display: inline;">
-            <input type = "number" name="bangou" min="1" max="60" required>
+            <input type = "number" name="minute" min="1" max="60" required>
         </div>
 
 
-        <input type="submit" class="mt-4 btn btn-primary" value="連絡する">
+        <input type="submit" class="mt-4 btn btn-primary" value="報告する">
     </form>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -67,12 +67,10 @@
 
         $(function () {
             $('form').submit(function () {
-                const name    = $('input[name="name"]').val();
-                const bangou = $('input[name="bangou"]').val();
-                const temperature  = $('input[name="temperature"]').val();
-                const shushoujou  = $('input[name="shushoujou"]').val();
-                const family = $('input[name="family"]').val();
-                const msg = `${name}\n${bangou}\n${temperature}\n${shushoujou}\n${family}`;
+                const name    = $('input[name="namae"]').val();
+                const zikan = $('input[name="zikan"]').val();
+                const minute  = $('input[name="minute"]').val();
+                const msg = `${name}\n${zikan}\n${minute}`;
                 sendText(msg);
                 return false;
             });
